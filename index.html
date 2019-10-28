@@ -11,21 +11,24 @@
 <body>
     <header class="header">
         <div class="search">
-            <form action="" method="post">
-                <input type="text" autocomplete="off" name="location" id="">
-                <button class="search-button">find</button>
+            <form id="location-form" action="" method="post">
+                <input id="location-input" type="text" autocomplete="off" name="location" id="">
+                <button type="submit" class="search-button">Find</button>
             </form>
         </div>
     </header>
     <div class="main-content">
-        <h2>Погода у ... </h2>
+        <h2>Погода у <span class="h2">...</span> </h2>
 
         <div class="weather"> 
-            
+
+               
+
         </div>
     </div>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="script/app.js"></script>
+
 </body>
 
 </html>
