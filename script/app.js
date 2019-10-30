@@ -1,3 +1,4 @@
+const proxy = "https://cors-anywhere.herokuapp.com/";
 let locationForm = document.querySelector('#location-form');
 let locationText = document.querySelector('.location-text');
 let temperature = document.querySelector('.temperature');
@@ -31,9 +32,9 @@ getLocation().then((coords) => {
     axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latt},${long}&key=AIzaSyAWPYajaSklomoZAVmOuozzvnfK2srbVoM`)
         .then((response) => {
 
-            locationText.textContent = response.data.results[2].formatted_address;
+            locationText.textContent = response.data.results[0].formatted_address;
 
-            axios(`https://api.weatherstack.com/current?access_key=c4db8878e27270c7e233fe2980948cff&query=${latt},${long}`)
+            axios(`${proxy}http://api.weatherstack.com/current?access_key=c4db8878e27270c7e233fe2980948cff&query=${latt},${long}`)
                 .then((response) => {
                     console.log(response);
 
@@ -68,7 +69,7 @@ function geocode(event) {
 
             locationText.textContent = response.data.results[0].formatted_address;
 
-            axios(`https://api.weatherstack.com/current?access_key=c4db8878e27270c7e233fe2980948cff&query=${latt},${long}`)
+            axios(`${proxy}http://api.weatherstack.com/current?access_key=c4db8878e27270c7e233fe2980948cff&query=${latt},${long}`)
                 .then((response) => {
                     console.log(response);
 
