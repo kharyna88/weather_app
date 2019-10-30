@@ -33,7 +33,7 @@ getLocation().then((coords) => {
 
             locationText.textContent = response.data.results[2].formatted_address;
 
-            axios(`http://api.weatherstack.com/current?access_key=c4db8878e27270c7e233fe2980948cff&query=${latt},${long}`)
+            axios(`https://api.weatherstack.com/current?access_key=c4db8878e27270c7e233fe2980948cff&query=${latt},${long}`)
                 .then((response) => {
                     console.log(response);
 
@@ -68,7 +68,7 @@ function geocode(event) {
 
             locationText.textContent = response.data.results[0].formatted_address;
 
-            axios(`http://api.weatherstack.com/current?access_key=c4db8878e27270c7e233fe2980948cff&query=${latt},${long}`)
+            axios(`https://api.weatherstack.com/current?access_key=c4db8878e27270c7e233fe2980948cff&query=${latt},${long}`)
                 .then((response) => {
                     console.log(response);
 
