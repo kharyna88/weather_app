@@ -9,27 +9,41 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="search">
-            <form id="location-form" action="" method="post">
-                <input id="location-input" type="text" autocomplete="off" name="location" id="">
-                <button type="submit" class="search-button">Find</button>
-            </form>
-        </div>
-    </header>
-    <div class="main-content">
-        <h2>Погода</h2>
-
-        <div class="weather">
-            <div>
-                <h3 class="location-text"></h3>
+    <div class="all-content">
+        <header class="header">
+            <div class="search">
+                <form id="location-form" action="" method="post">
+                    <input id="location-input" type="text" autocomplete="off" name="location" id="">
+                    <button type="submit" class="search-button">Find</button>
+                </form>
             </div>
-            <div>
-                <h3 class="temperature"></h3>
+        </header>
+        <div class="main-content">
+            <h2>Weather</h2>
+            <h3 class="location-text"></h3>
+
+            <div class="weather">
+                <div class="icon-block">
+                    <div class="weather-icon"> </div>
+                    <h4 class="weather-description"></h4>
+                </div>
+
+                <div class="temperature-block">
+                    <h3 class="temperature"></h3>
+                    <h4 class="temperature-text weather-description"></h4>
+                </div>
+                <div class="wind-blok">
+                    <h3 class="wind-speed temperature"></h3>
+                    <h4 class="wind-text weather-description"></h4>
+                </div>
+            </div>
+            <div class="my-location-block">
+                <button type="submit" class="my-location">My Location</button>
             </div>
         </div>
 
     </div>
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="script/app.js"></script>
 
